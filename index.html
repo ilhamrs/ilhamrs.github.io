@@ -7,6 +7,11 @@
     <title>Ilham's Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
     <style>
         /* Custom styles for smooth scrolling and font */
         html {
@@ -35,62 +40,46 @@
 <body class="min-h-screen bg-gray-900 text-gray-100">
 
     <!-- Header/Navigation -->
-    <header class="bg-gray-800 shadow-lg py-4 px-6 md:px-12 fixed w-full z-10 rounded-b-lg">
-        <nav class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-teal-400">Ilham Portfolio</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#about"
-                        class="text-gray-300 hover:text-teal-400 transition-colors duration-300 rounded-md p-2">About</a>
-                </li>
-                <li><a href="#projects"
-                        class="text-gray-300 hover:text-teal-400 transition-colors duration-300 rounded-md p-2">Projects</a>
-                </li>
-                <li><a href="#skills"
-                        class="text-gray-300 hover:text-teal-400 transition-colors duration-300 rounded-md p-2">Skills</a>
-                </li>
-                <li><a href="#contact"
-                        class="text-gray-300 hover:text-teal-400 transition-colors duration-300 rounded-md p-2">Contact</a>
-                </li>
+    <header class="bg-gray-800 shadow-lg py-4 px-6 md:px-12 fixed w-full z-50 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center flex-wrap">
+            <h1 class="text-2xl font-bold text-teal-400">Ilham's Portfolio</h1>
+            <!-- Hamburger menu button for mobile -->
+            <button id="menu-button" class="md:hidden text-gray-300 hover:text-teal-400 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- Navigation links -->
+            <ul id="nav-links" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 w-full md:w-auto mt-4 md:mt-0">
+                <li><a href="#about" class="block text-gray-300 hover:text-teal-400 transition-colors duration-300 rounded-md p-2">About</a></li>
+                <li><a href="#projects" class="block text-gray-300 hover:text-teal-400 transition-colors duration-300 rounded-md p-2">Projects</a></li>
+                <li><a href="#skills" class="block text-gray-300 hover:text-teal-400 transition-colors duration-300 rounded-md p-2">Skills</a></li>
+                <li><a href="#achievements" class="block text-gray-300 hover:text-teal-400 transition-colors duration-300 rounded-md p-2">Achievements</a></li>
+                <li><a href="#contact" class="block text-gray-300 hover:text-teal-400 transition-colors duration-300 rounded-md p-2">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
-        style="background-image: url('https://placehold.co/1920x1080/0f172a/e2e8f0?text=Game+Developer+Background');">
+    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/0f172a/e2e8f0?text=Game+Developer+Background');">
         <div class="absolute inset-0 bg-black opacity-70 rounded-b-lg"></div>
-        <div
-            class="relative z-10 p-8 rounded-xl bg-gray-800 bg-opacity-80 shadow-2xl max-w-3xl mx-auto border border-gray-700">
-            <img src="assets/img/666.png" alt="Developer Avatar"
-                class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-teal-400 object-cover shadow-lg" />
+        <div class="relative z-10 p-8 rounded-xl bg-gray-800 bg-opacity-80 shadow-2xl max-w-3xl mx-auto border border-gray-700">
+            <img
+                src="assets/img/666.png"
+                alt="Developer Avatar"
+                class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-teal-400 object-cover shadow-lg"
+            />
             <h2 class="text-5xl font-extrabold text-white mb-4 leading-tight">Hi, I'm <span class="text-teal-400">Ilham Ramadhani Saputro</span></h2>
             <p class="text-2xl text-gray-300 mb-6 font-light">
-                A passionate <span class="font-semibold text-white">Game Developer</span> crafting immersive
-                experiences.
+                A passionate <span class="font-semibold text-white">Game Developer</span> crafting immersive experiences.
             </p>
             <div class="flex justify-center space-x-6">
-                <a href="#projects"
-                    class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-gamepad-2 mr-2">
-                        <path d="M6 12H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2" />
-                        <path d="M12 18h.01" />
-                        <path d="M17 17v.01" />
-                        <path d="M12 23h.01" />
-                        <path d="M7 17v.01" />
-                        <path d="M12 13V7l4 6" />
-                    </svg>
+                <a href="#projects" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2 mr-2"><path d="M6 12H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2"/><path d="M12 18h.01"/><path d="M17 17v.01"/><path d="M12 23h.01"/><path d="M7 17v.01"/><path d="M12 13V7l4 6"/></svg>
                     View Projects
                 </a>
-                <a href="#contact"
-                    class="border border-teal-600 text-teal-400 hover:bg-teal-600 hover:text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-mail mr-2">
-                        <rect width="20" height="16" x="2" y="4" rx="2" />
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                    </svg>
+                <a href="#contact" class="border border-teal-600 text-teal-400 hover:bg-teal-600 hover:text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mr-2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     Get in Touch
                 </a>
             </div>
@@ -112,12 +101,11 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-lg text-gray-300 leading-relaxed space-y-4">
                     <p>
-                        Hello! I'm Ilham Ramadhani Sapuutro, a dedicated Game Developer with a strong passion for bringing imaginative
-                        worlds and engaging mechanics to life. With 2 years of experience in the industry, I specialize
-                        in full-stack game development, from initial concept and design to implementation and
-                        optimization.
+                        I'm a passionate and skilled game developer specializing in creating immersive 
+                        and engaging experiences using the Unity engine. With a strong foundation in C# programming, 
+                        2D and 3D game design, and cross-platform development, I have worked on a variety of projects ranging from mobile games to AR.
                     </p>
-                    <p>
+                    <!-- <p>
                         My journey in game development began with a fascination for interactive storytelling and complex
                         systems. I thrive on challenges and enjoy working on diverse projects, whether it's building
                         robust gameplay systems, optimizing performance, or crafting compelling narratives.
@@ -126,7 +114,7 @@
                         I'm proficient in various game engines like Unity and Ren'Py, and skilled in programming
                         languages such as C# and Python. I'm always eager to learn new technologies and push the boundaries
                         of what's possible in interactive entertainment.
-                    </p>
+                    </p> -->
                 </div>
                 <div class="flex justify-center">
                     <img src="assets/img/666.png" alt="Alex Vance"
@@ -173,6 +161,19 @@
         </div>
     </section>
 
+    <!-- Achievements and Certificates Section -->
+    <section id="achievements" class="py-20 px-6 md:px-12 bg-gray-800 rounded-lg">
+        <div class="container mx-auto max-w-4xl">
+            <h3 class="text-4xl font-bold text-center text-teal-400 mb-12 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trophy mr-4"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 11V7a2 2 0 0 1 4 0v4"/><path d="M12 17H8c-1.66 0-3-1.34-3-3v-2h14v2c0 1.66-1.34 3-3 3h-4Z"/><path d="M12 17v5"/></svg>
+                Achievements & Certificates
+            </h3>
+            <div id="achievements-container" class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Achievements and Certificates will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-6 md:px-12 bg-gray-800 rounded-lg">
         <div class="container mx-auto max-w-3xl text-center">
@@ -199,7 +200,7 @@
                     </svg>
                     <span class="text-lg">Email</span>
                 </a>
-                <a href="https://github.com/ilhamrs" target="_blank" rel="noopener noreferrer"
+                <!-- <a href="https://github.com/ilhamrs" target="_blank" rel="noopener noreferrer"
                     class="flex flex-col items-center text-gray-300 hover:text-teal-400 transition-colors duration-300 transform hover:scale-110">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -210,7 +211,7 @@
                         <path d="M13 18c-1 2-1 6-2 6" />
                     </svg>
                     <span class="text-lg">GitHub</span>
-                </a>
+                </a> -->
                 <a href="https://www.linkedin.com/in/ilham-ramadhani-s/" target="_blank" rel="noopener noreferrer"
                     class="flex flex-col items-center text-gray-300 hover:text-teal-400 transition-colors duration-300 transform hover:scale-110">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
@@ -224,7 +225,7 @@
                 </a>
             </div>
             <p class="text-gray-400 text-sm">
-                &copy; <span id="current-year"></span> Alex Vance. All rights reserved.
+                &copy; <span id="current-year"></span> Ilham Ramadhani Saputro. All rights reserved.
             </p>
         </div>
     </section>
@@ -234,24 +235,49 @@
             // Set current year in footer
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
+            // Hamburger menu functionality
+            const menuButton = document.getElementById('menu-button');
+            const navLinks = document.getElementById('nav-links');
+
+            if (menuButton && navLinks) {
+                menuButton.addEventListener('click', () => {
+                    navLinks.classList.toggle('hidden');
+                    navLinks.classList.toggle('flex');
+                    navLinks.classList.toggle('flex-col'); // Ensure vertical stacking on mobile
+                });
+
+                // Close menu when a link is clicked (for smooth scrolling)
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth < 768) { // Only close on mobile
+                            navLinks.classList.add('hidden');
+                            navLinks.classList.remove('flex');
+                            navLinks.classList.remove('flex-col');
+                        }
+                    });
+                });
+            }
+
             // Sample data for projects
             const projects = [
                 {
                     id: 1,
                     title: 'Battle of Pong 2D',
-                    description: 'A 3D space exploration game built with Unity, featuring procedural generation and dynamic combat.',
+                    description: 'A simple 2D Pong game with two modes (Single and Multi Player).',
                     imageUrl: 'assets/img/portfolio/battleofpong2d2.png',
-                    githubLink: '#',
+                    githubLink: 'https://github.com/ilhamrs/Pong2D',
                     liveLink: '#',
+                    website: '#',
                     technologies: ['Unity', 'C#', '2D', 'PC'],
                 },
                 {
                     id: 2,
                     title: 'Project Space War',
-                    description: 'A retro-style 2D pixel art dungeon crawler developed with Godot Engine and custom tilemap editor.',
+                    description: 'A simple 2D pixelated spaceship shoot\'em up.',
                     imageUrl: 'assets/img/portfolio/projectspacewar2.png',
-                    githubLink: '#',
+                    githubLink: 'https://github.com/ilhamrs/TopDownShooter2D',
                     liveLink: '#',
+                    website: '#',
                     technologies: ['Unity', 'C#', '2D', 'PC'],
                 },
                 {
@@ -261,6 +287,7 @@
                     imageUrl: 'assets/img/portfolio/indophonic2.jpg',
                     githubLink: '#',
                     liveLink: '#',
+                    website: '#',
                     technologies: ['Unity', 'C#', '2D', 'Android'],
                 },
                 {
@@ -269,7 +296,8 @@
                     description: 'Deadliner tells a tale of Dudung\'s struggle in completing his final research assignment as a college student.',
                     imageUrl: 'assets/img/portfolio/deadliner2.png',
                     githubLink: '#',
-                    liveLink: 'https://verygoodenof.itch.io/deadliner',
+                    liveLink: '#',
+                    website: 'https://verygoodenof.itch.io/deadliner',
                     technologies: ['Unity', 'C#', '2D', 'PC'],
                 },
                 {
@@ -278,7 +306,8 @@
                     description: 'Immersive 3D open-world fantasy MMORPG that blends traditional fantasy elements with modern mechanics, providing players with a simple yet engaging gameplay experience.',
                     imageUrl: 'assets/img/portfolio/cxgameplay.jpeg',
                     githubLink: '#',
-                    liveLink: 'https://verygoodenof.itch.io/deadliner',
+                    liveLink: '#',
+                    website: 'https://collector-x.com/credit',
                     technologies: ['Unity', 'C#', '3D', 'Online', 'Multiplayer', 'MMORPG', 'Android', 'iOS'],
                 },
                 {
@@ -287,7 +316,8 @@
                     description: 'Southeast Asia inspired Cyberpunk Meets Space Bounty Hunting.',
                     imageUrl: 'assets/img/portfolio/cqgameplay.png',
                     githubLink: '#',
-                    liveLink: 'https://verygoodenof.itch.io/deadliner',
+                    liveLink: '#',
+                    website: 'https://chainquadrant.xyz/',
                     technologies: ['Unity', 'C#', '3D', 'Online', 'Multiplayer', 'MMORPG', 'Android', 'iOS'],
                 },
             ];
@@ -295,9 +325,40 @@
             // Sample data for skills
             const skills = [
                 { category: 'Game Engines', items: ['Unity', 'Ren\'Py'] },
-                { category: 'Programming Languages', items: ['C#', 'Java', 'Python'] },
-                { category: 'Tools & Software', items: ['Git', 'Trello'] },
+                { category: 'Programming Languages', items: ['C#', 'Java', 'Python', 'SQL', 'PHP'] },
+                { category: 'Tools & Software', items: ['Git', 'Trello', 'Visual Studio', 'VS Code'] },
                 // { category: 'Concepts', items: ['Game Design', 'Level Design', 'AI Programming', 'Physics Simulation', 'Networking'] },
+            ];
+
+            // Sample data for achievements and certificates
+            const achievements = [
+                {
+                    id: 1,
+                    title: 'Best Entertainment Game',
+                    issuer: 'ICE Institute',
+                    date: 'July 2022',
+                    description: 'Awarded for innovative gameplay and entertaining in "Deadliner".',
+                    link: '#', // Link to certificate or more info
+                    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trophy text-teal-400 mr-3"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 11V7a2 2 0 0 1 4 0v4"/><path d="M12 17H8c-1.66 0-3-1.34-3-3v-2h14v2c0 1.66-1.34 3-3 3h-4Z"/><path d="M12 17v5"/></svg>'
+                },
+                // {
+                //     id: 2,
+                //     title: 'Unreal Engine Certified Developer',
+                //     issuer: 'Epic Games',
+                //     date: 'March 2022',
+                //     description: 'Demonstrated proficiency in advanced Unreal Engine features and development practices.',
+                //     link: '#',
+                //     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-certificate text-teal-400 mr-3"><path d="M4 18v-4"/><path d="M4 10V6"/><path d="M8 4h8"/><path d="M20 6v4"/><path d="M20 14v4"/><path d="M16 20H8"/><path d="M12 10v4"/><path d="M12 12h4"/><path d="M12 14h2"/><path d="M12 16h-2"/><path d="M12 18h-4"/></svg>'
+                // },
+                {
+                    id: 2,
+                    title: 'Unity Certified Associate: Programmer',
+                    issuer: 'Unity Technologies',
+                    date: 'October 2024',
+                    description: 'Validated expertise in C# scripting, game logic, and Unity editor workflows.',
+                    link: 'https://www.credly.com/go/hzXrlWxC',
+                    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award text-teal-400 mr-3"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/><path d="M12 14v8"/></svg>'
+                },
             ];
 
             // Function to render projects
@@ -325,12 +386,16 @@
                             </div>
                             <div class="flex space-x-4">
                                 <a href="${project.githubLink}" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-teal-400 transition-colors duration-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github mr-2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.44-.78-3.46 0 0-1.09 0-3 1.5a9.2 9.2 0 0 0-6 0c-1.91-1.5-3-1.5-3-1.5A4.8 4.8 0 0 0 2 13.5c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-5-2"/><path d="M13 18c-1 2-1 6-2 6"/></svg>
+                                    <i class="fab fa-github mr-2"></i>
                                     GitHub
                                 </a>
                                 <a href="${project.liveLink}" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-teal-400 transition-colors duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code mr-2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                                     Live Demo
+                                </a>
+                                <a href="${project.website}" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-teal-400 transition-colors duration-300">
+                                    
+                                    Website
                                 </a>
                             </div>
                         </div>
@@ -364,9 +429,44 @@
                 });
             };
 
+            // Function to render achievements and certificates
+            const renderAchievements = () => {
+                const achievementsContainer = document.getElementById('achievements-container');
+                if (!achievementsContainer) return;
+
+                achievementsContainer.innerHTML = ''; // Clear existing content
+
+                achievements.forEach(achievement => {
+                    const achievementCard = document.createElement('div');
+                    achievementCard.className = 'bg-gray-900 rounded-xl shadow-xl p-6 border border-gray-700 flex flex-col justify-between';
+
+                    achievementCard.innerHTML = `
+                        <div>
+                            <div class="flex items-center mb-3">
+                                ${achievement.icon}
+                                <h4 class="text-xl font-semibold text-white">${achievement.title}</h4>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-2"><strong>Issuer:</strong> ${achievement.issuer}</p>
+                            <p class="text-gray-400 text-sm mb-4"><strong>Date:</strong> ${achievement.date}</p>
+                            <p class="text-gray-300 text-base">${achievement.description}</p>
+                        </div>
+                        ${achievement.link ? `
+                            <div class="mt-4">
+                                <a href="${achievement.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300 text-sm font-medium">
+                                    View Credential
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link ml-1"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                </a>
+                            </div>
+                        ` : ''}
+                    `;
+                    achievementsContainer.appendChild(achievementCard);
+                });
+            };
+
             // Call render functions on load
             renderProjects();
             renderSkills();
+            renderAchievements();
         });
     </script>
 
